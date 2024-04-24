@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
+    "prestart": "docker start pg",
     "start": "nodemon src/index",
-    "debug": "nodemon --inspect src/index",
+    "debug": "npm run prestart && nodemon --inspect src/index",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write ."
   },

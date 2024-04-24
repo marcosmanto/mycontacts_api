@@ -4,6 +4,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index",
+    "debug": "nodemon --inspect src/index",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write ."
   },

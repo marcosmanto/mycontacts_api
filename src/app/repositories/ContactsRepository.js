@@ -1,5 +1,6 @@
 const { v4 } = require("uuid");
 
+// Database mock
 let contacts = [
   {
     id: v4(),

@@ -17,6 +17,7 @@ class ContactController {
 
       return res.json(contact);
     } catch (error) {
+      //console.log(error);
       return res.status(404).json({ error: "User not found" });
     }
   }
@@ -66,14 +67,18 @@ class ContactController {
       return res.status(400).json({ error: "This e-mail is already in use" });
     }
 
-    const contact = await ContactsRepository.update(id, {
-      name,
-      email,
-      phone,
-      category_id,
-    });
+    try {
+      const contact = await ContactsRepository.update(id, {
+        name,
+        email,
+        phone,
+        category_id,
+      });
 
-    res.json(contact);
+      res.json(contact);
+    } catch (error) {
+      res.status(400).json({ error: "Bad request" });
+    }
   }
 
   async delete(req, res) {

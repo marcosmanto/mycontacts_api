@@ -11,15 +11,14 @@ class ContactController {
 
   async show(req, res) {
     // Get ONE record
-    const { id } = req.params;
-    const contact = await ContactsRepository.findById(id);
+    try {
+      const { id } = req.params;
+      const contact = await ContactsRepository.findById(id);
 
-    if (!contact) {
-      // 404: Not Found
+      return res.json(contact);
+    } catch (error) {
       return res.status(404).json({ error: "User not found" });
     }
-
-    res.json(contact);
   }
 
   async store(req, res) {
@@ -81,12 +80,13 @@ class ContactController {
     // Delete a record
     const { id } = req.params;
 
+    /* No need to search user before delete
     const contact = await ContactsRepository.findById(id);
 
     if (!contact) {
       // 404: Not Found
       return res.status(404).json({ error: "User not found" });
-    }
+    }*/
 
     await ContactsRepository.delete(id);
     // 204: No Content

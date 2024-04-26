@@ -1,0 +1,180 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "MyContactsAPI",
+    "collectionId": "3e5dabf7-f794-4ee0-b52c-42b24d0024ef",
+    "dateExported": "2024-04-26T01:42:19.017Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "0a7ebd00-3f0f-4ab5-85f5-d2ec87b96202",
+            "name": "Contacts",
+            "containerId": "",
+            "created": "2024-04-22T19:16:53.430Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "d0ed531f-2274-49ed-b240-d8271444f1eb",
+            "name": "Categories",
+            "containerId": "",
+            "created": "2024-04-25T19:39:37.670Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "6ae8c9f6-c0d1-4999-8399-e892fa792044",
+            "colId": "3e5dabf7-f794-4ee0-b52c-42b24d0024ef",
+            "containerId": "d0ed531f-2274-49ed-b240-d8271444f1eb",
+            "name": "Create Category",
+            "url": "{{BASE_URL}}/categories",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2024-04-25T19:39:53.722Z",
+            "modified": "2024-04-25T20:51:51.512Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"   Twitter (X)  \"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "3967f603-b706-4e32-a020-e9cc5c9626e4",
+            "colId": "3e5dabf7-f794-4ee0-b52c-42b24d0024ef",
+            "containerId": "d0ed531f-2274-49ed-b240-d8271444f1eb",
+            "name": "Get Category",
+            "url": "{{BASE_URL}}/categories/97d87c7f-bad7-4265-8a69-e9d6ad7ec7d3",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2024-04-25T21:10:30.850Z",
+            "modified": "2024-04-25T21:24:08.166Z",
+            "headers": []
+        },
+        {
+            "_id": "17b026db-abf3-4c46-b44c-cb88b559f8c0",
+            "colId": "3e5dabf7-f794-4ee0-b52c-42b24d0024ef",
+            "containerId": "d0ed531f-2274-49ed-b240-d8271444f1eb",
+            "name": "List Categories",
+            "url": "{{BASE_URL}}/categories?orderBy=asc",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-04-25T19:39:42.492Z",
+            "modified": "2024-04-25T19:40:34.497Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "orderBy",
+                    "value": "asc",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "7c64cfaa-5199-4c9b-b8e9-c466da2b4a5f",
+            "colId": "3e5dabf7-f794-4ee0-b52c-42b24d0024ef",
+            "containerId": "d0ed531f-2274-49ed-b240-d8271444f1eb",
+            "name": "Update Category",
+            "url": "{{BASE_URL}}/category/42bf2d24-2523-454f-9fbd-d13e296c2c78",
+            "method": "PUT",
+            "sortNum": 12500,
+            "created": "2024-04-25T21:02:10.819Z",
+            "modified": "2024-04-25T21:06:24.103Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Comunidade DevBoost\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "47b525df-1c51-4df1-96d9-43a21f3c992f",
+            "colId": "3e5dabf7-f794-4ee0-b52c-42b24d0024ef",
+            "containerId": "d0ed531f-2274-49ed-b240-d8271444f1eb",
+            "name": "Delete Category",
+            "url": "{{BASE_URL}}/categories/98060dce-71c2-4f80-8d4c-a966e398ac84",
+            "method": "DELETE",
+            "sortNum": 15000,
+            "created": "2024-04-25T20:42:13.839Z",
+            "modified": "2024-04-25T20:49:35.088Z",
+            "headers": []
+        },
+        {
+            "_id": "f539091b-3eaa-4ae4-8e4c-17ffa39e8b0c",
+            "colId": "3e5dabf7-f794-4ee0-b52c-42b24d0024ef",
+            "containerId": "0a7ebd00-3f0f-4ab5-85f5-d2ec87b96202",
+            "name": "List Contacts",
+            "url": "{{BASE_URL}}/contacts?orderBy=asc",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-04-22T19:17:22.541Z",
+            "modified": "2024-04-25T19:06:52.213Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "orderBy",
+                    "value": "asc",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "fae9fb48-ba64-463f-84bb-cc536af27f51",
+            "colId": "3e5dabf7-f794-4ee0-b52c-42b24d0024ef",
+            "containerId": "0a7ebd00-3f0f-4ab5-85f5-d2ec87b96202",
+            "name": "Get Contact",
+            "url": "{{BASE_URL}}/contacts/1384c2e9-debd-4b2d-805a-38082a5a3e0a",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-04-23T13:24:39.879Z",
+            "modified": "2024-04-25T22:43:32.793Z",
+            "headers": []
+        },
+        {
+            "_id": "8ef61d59-3308-48d3-9dd6-47b0356af849",
+            "colId": "3e5dabf7-f794-4ee0-b52c-42b24d0024ef",
+            "containerId": "0a7ebd00-3f0f-4ab5-85f5-d2ec87b96202",
+            "name": "Create Contact",
+            "url": "{{BASE_URL}}/contacts",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-04-23T14:59:51.208Z",
+            "modified": "2024-04-25T19:23:37.984Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"To Delete\",\n  \"email\": \"todelete@mail.com\",\n  \"phone\":\"123456789\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "870f2fc1-6f5a-415a-8d9d-59e2630562a2",
+            "colId": "3e5dabf7-f794-4ee0-b52c-42b24d0024ef",
+            "containerId": "0a7ebd00-3f0f-4ab5-85f5-d2ec87b96202",
+            "name": "Delete Contact",
+            "url": "{{BASE_URL}}/contacts/62ed204d-011a-4bd6-aa08-7a4618342276",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-04-23T13:41:27.724Z",
+            "modified": "2024-04-25T19:28:44.780Z",
+            "headers": []
+        },
+        {
+            "_id": "89c4701b-319e-467c-930c-6596d1748622",
+            "colId": "3e5dabf7-f794-4ee0-b52c-42b24d0024ef",
+            "containerId": "0a7ebd00-3f0f-4ab5-85f5-d2ec87b96202",
+            "name": "Update Contact ",
+            "url": "{{BASE_URL}}/contact/a69a09f0-3662-4b1a-8538-60f22ceeb7c3",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-04-24T02:25:46.213Z",
+            "modified": "2024-04-25T21:58:46.236Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"José Silva Sauro\",\n  \"email\": \"jose@mail.com\",\n  \"phone\":\"123123123\",\n  \"category_id\": \"b23964e2-af27-4bed-aa3b-818028eb89c7\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "cxRLtb6GLMXbt23u0zzYrFxqPQc9OOb4i0SkUgVtqAyvD7KQHb8QblwyQhS3nQlCVSs0Edog_4UTtrmkWEBZIg"
+}

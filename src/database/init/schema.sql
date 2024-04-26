@@ -1,4 +1,4 @@
-CREATE DATABASE mycontacts;
+-- CREATE DATABASE mycontacts;
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
@@ -6,6 +6,11 @@ CREATE TABLE IF NOT EXISTS categories (
   id UUID NOT NULL UNIQUE DEFAULT uuid_generate_v4(),
   name VARCHAR NOT NULL
 );
+
+COPY categories
+FROM '/docker-entrypoint-initdb.d/categories.csv'
+DELIMITER ','
+CSV HEADER;
 
 CREATE TABLE IF NOT EXISTS contacts (
   id UUID NOT NULL UNIQUE DEFAULT uuid_generate_v4(),
@@ -15,3 +20,8 @@ CREATE TABLE IF NOT EXISTS contacts (
   category_id UUID,
   FOREIGN KEY(category_id) REFERENCES categories(id)
 );
+
+COPY contacts
+FROM '/docker-entrypoint-initdb.d/contacts.csv'
+DELIMITER ','
+CSV HEADER;

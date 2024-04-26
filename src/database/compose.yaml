@@ -1,0 +1,10 @@
+services:
+  db:
+    image: postgres
+    container_name: db
+    env_file:
+      - ../../.env.development
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
